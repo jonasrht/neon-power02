@@ -50,6 +50,7 @@ input[type="password"] {
 .login-form {
   padding: 10px;
   font-family: 'Press Start 2P', cursive;
+  color: #f1f1f1;
 }
 
 .form-control {
@@ -161,6 +162,7 @@ input[type="password"] {
 /*============= FOOTER =============*/
 
 .copyright-text {
+  color: #f1f1f1;
   font-size: small;
 }
 
@@ -235,6 +237,14 @@ input[type="password"] {
 /* Für unter 768px */
 @media (max-width: 767.98px) {
 
+}
+
+/*============= MUSIC PLAYER =============*/
+.musicplayer {
+  bottom: 0; 
+  position: fixed; 
+  right: 0; 
+  margin: 20px;
 }
 
 
