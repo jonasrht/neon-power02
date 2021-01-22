@@ -90,6 +90,8 @@ input[type="password"] {
   width: 70%;
 }
 
+/* Style der contentbox */
+
 .my-content {
   background-image: url(../assetes/img/smoke-2.png), url(../assetes/img/smoky_bg.png);
   background-color: #222;
@@ -154,7 +156,7 @@ input[type="password"] {
   left: 0;
   /* background-color: black; */
   overflow-x: hidden;
-  padding-top: 20px;
+  
 }
 
 .sidenav a {
