@@ -10,6 +10,7 @@
 @media (max-width: 767.98px) {}
 
 body {
+  color: white;
   /* Kein horizontales scrollen */
   overflow-x: hidden;
   /* Schriftart */
@@ -90,6 +91,7 @@ input[type="password"] {
   width: 70%;
 }
 
+/*============= CONTENT BOX =============*/
 /* Style der contentbox */
 
 .my-content {

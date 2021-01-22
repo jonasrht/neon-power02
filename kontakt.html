@@ -4,16 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Game libraries -->
-  <script src="libs/phaser.min.js"></script>
-
-  <!-- Prefabs -->
-  <script src="prefabs/helper.js"></script>
-
-  <!-- Scenes -->
-  <script src="scenes/boot.js"></script>
-  <script src="scenes/menu.js"></script>
-  <script src="scenes/preload.js"></script>
 
   <!-- Scripts -->
   <script src="js/app.js"></script>
@@ -31,6 +21,7 @@
 
   <!-- CSS-Dateien aus css Ordner laden -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
 
   <!-- Favicon laden -->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -85,7 +76,50 @@
       <!-- CONTENT -->
       <div class="col-lg-8 col-md-12 col-sm-12 text-center my-content">
         <!-- <div class="phaser-app"></div> -->
-        <img class="img-fluid preview" src="img/preview.png" alt="">
+        <h1>Kontakt</h1>
+
+        <!-- Kontaktformular -->
+        <div id="contact-form" >
+            <div>
+                <h2>Nice to Meet You!</h2> 
+                <h4>Haben Sie eine Frage oder möchten Sie einfach nur Kontakt aufnehmen? Lass uns schreiben.</h4> 
+            </div>
+                <p id="failure">Oopsie...message not sent.</p>  
+                <p id="success">Your message was sent successfully. Thank you!</p>
+        
+                   <form method="post" action="/">
+                    <div>
+                      <label for="name">
+                          <span class="required">Name: *</span> 
+                          <input type="text" id="name" name="name" value="" placeholder="Dein Name" required="required" tabindex="1" autofocus="autofocus" />
+                      </label> 
+                    </div>
+                    <div>
+                      <label for="email">
+                          <span class="required">Email: *</span>
+                          <input type="email" id="email" name="email" value="" placeholder="Deine Email" tabindex="2" required="required" />
+                      </label>  
+                    </div>
+                    <div>		          
+                      <label for="subject">
+                      <span class="required">Betreff: </span>
+                            <input type="email" id="email" name="email" value="" placeholder="Betreff" tabindex="2" required="required" />
+                      </label>
+                    </div>
+                    <div>		          
+                      <label for="message">
+                          <span class="required">Message: *</span> 
+                          <textarea id="message" name="message" placeholder="
+                          Bitte schreiben Sie Ihre Nachricht hier." tabindex="5" required="required"></textarea> 
+                      </label>  
+                    </div>
+                    <div>		           
+                      <button name="submit" type="submit" id="submit" >Absenden</button> 
+                    </div>
+                   </form>
+        
+            </div>
+
         </div>
 
       <!-- LOGIN -->
@@ -122,21 +156,31 @@
 
       <div class="col-md-4 col-sm-6 col-xs-12 text-left">
         <ul class="social-icons">
-          <li><a class="facebook" href="http://facebook.com/neon-power"><i class="fab fa-facebook"></i></a></li>
-          <li><a class="insta" href="https://www.instagram.com/neon-power"><i class="fab fa-twitter"></i></a></li>
-          <li><a class="twitter" href="http://twitter.com/neon-power"><i class="fab fa-twitter"></i></a></li>
-          <li><a class="youtube" href="https://www.youtube.com/neon-power"><i class="fab fa-twitter"></i></a></li>
+          <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+          <li><a class="insta" href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a class="youtube" href="#"><i class="fab fa-twitter"></i></a></li>
         </ul>
       </div>
       <i class="fab fa-facebook"></i>
     </div>
   </div>
 
+  <!-- <img class="bgimg" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/bg.svg" alt=""> -->
+
   <!-- BG IMG -->
   <div class="sickybg">
-    <div class="color-overlay"></div>
     <div class="background-80s animated-clouds stars" style="--background-height:100vh">
       <div class="grid" style="--grid-color:rgba(115,59,139,0.7);--grid-size:30px;--grid-blur:1px;"></div>
+
+      <!-- <div class="road-off" ></div> -->
+      <div class="overlay"></div>
+
+      <!-- <div class="text">
+    <div class="outrun glow">STAMMSPIELER</div> -->
+
+      <!-- <div class="chrome shine" data-text="80'S RETRO">NEON<span class="spark"></span></div>
+    <div class="chrome shine" data-text="DESIGN" style="--shine-delay:1s;">POWER<span class="spark spark-offset"></span></div> -->
     </div>
   </div>
   <svg width="0" height="0">
@@ -154,11 +198,11 @@
       from="0.01" to="0.03" dur="30s" fill="freeze" />
   </svg>
 
-
   <!-- MUSIC PLAYER-->
+
   <div class="musicplayer">
     <button id = "playButton" onclick="playMusic()"></button>
-    <audio id ="musicplayer" controls autoplay>
+    <audio id ="musicplayer" controls controls volume="0.1">
       <source src="sounds/sound02.mp3" type="audio/mpeg">
     </audio>
     <script>
@@ -173,7 +217,6 @@
       var vid = document.getElementById("musicplayer").volume = 0.05;
     </script>
   </div>
-
 
 </body>
 
