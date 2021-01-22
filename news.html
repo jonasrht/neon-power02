@@ -166,9 +166,23 @@
 
   <!-- MUSIC PLAYER-->
 
-  <audio id ="musicplayer" volume="0.1" class="musicplayer" controls>
-    <source src="sound.mp3" type="audio/mpeg">
-  </audio>
+  <div class="musicplayer">
+    <button id = "playButton" onclick="playMusic()"></button>
+    <audio id ="musicplayer" controls controls volume="0.1">
+      <source src="sounds/sound02.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+      function playMusic() {
+        var music = document.getElementById("musicplayer");
+        if (music.paused) {
+          music.play();
+        } else {
+          music.pause();
+        }
+      }
+      var vid = document.getElementById("musicplayer").volume = 0.05;
+    </script>
+  </div>
 
 </body>
 
