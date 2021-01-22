@@ -6,6 +6,29 @@ body {
   font-family: 'Press Start 2P', cursive;
 }
 
+h1 {
+  margin: 30px;
+  color: white;
+	text-decoration: none;
+  border-bottom: none;
+  position: relative;
+  background-image: linear-gradient(transparent 64px, #F243B3 50%, #FFCA47 100%);
+}
+
+h1:after {
+  margin-top: 40px;
+  content: '';
+  width: 20%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  height: 3px;
+  background: rgb(63,94,251);
+  background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+
 label {
   margin-bottom: 5px;
   margin-top: 5px;
