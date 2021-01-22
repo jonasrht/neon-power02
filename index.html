@@ -122,31 +122,23 @@
 
       <div class="col-md-4 col-sm-6 col-xs-12 text-left">
         <ul class="social-icons">
-          <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
-          <li><a class="insta" href="#"><i class="fab fa-twitter"></i></a></li>
-          <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-          <li><a class="youtube" href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a class="facebook" href="http://facebook.com/neon-power"><i class="fab fa-facebook"></i></a></li>
+          <li><a class="insta" href="https://www.instagram.com/neon-power"><i class="fab fa-twitter"></i></a></li>
+          <li><a class="twitter" href="http://twitter.com/neon-power"><i class="fab fa-twitter"></i></a></li>
+          <li><a class="youtube" href="https://www.youtube.com/neon-power"><i class="fab fa-twitter"></i></a></li>
         </ul>
       </div>
       <i class="fab fa-facebook"></i>
     </div>
   </div>
 
-  <!-- <img class="bgimg" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/bg.svg" alt=""> -->
-
   <!-- BG IMG -->
   <div class="sickybg">
     <div class="background-80s animated-clouds stars" style="--background-height:100vh">
       <div class="grid" style="--grid-color:rgba(115,59,139,0.7);--grid-size:30px;--grid-blur:1px;"></div>
 
-      <!-- <div class="road-off" ></div> -->
       <div class="overlay"></div>
 
-      <!-- <div class="text">
-    <div class="outrun glow">STAMMSPIELER</div> -->
-
-      <!-- <div class="chrome shine" data-text="80'S RETRO">NEON<span class="spark"></span></div>
-    <div class="chrome shine" data-text="DESIGN" style="--shine-delay:1s;">POWER<span class="spark spark-offset"></span></div> -->
     </div>
   </div>
   <svg width="0" height="0">
@@ -165,13 +157,24 @@
   </svg>
 
   <!-- MUSIC PLAYER-->
-  
-  <audio id ="musicplayer" class="musicplayer" controls autoplay controls volume="0.1">
-    <source src="sounds/sound02.mp3" type="audio/mpeg">
-  </audio>
-  <script>
-    var vid = document.getElementById("musicplayer").volume = 0.05;
-  </script>
+  <div class="musicplayer">
+    <button id = "playButton" onclick="playMusic()"></button>
+    <audio id ="musicplayer" controls controls volume="0.1">
+      <source src="sounds/sound02.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+      function playMusic() {
+        var music = document.getElementById("musicplayer");
+        if (music.paused) {
+          music.play();
+        } else {
+          music.pause();
+        }
+      }
+      var vid = document.getElementById("musicplayer").volume = 0.05;
+    </script>
+  </div>
+
 
 </body>
 
