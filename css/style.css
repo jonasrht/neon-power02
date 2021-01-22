@@ -177,19 +177,19 @@ input[type="password"] {
 }
 
 .facebook {
-  background-image: url("/assetes/img/fb-icon-transparent.png");
+  background-image: url("../assetes/img/fb-icon-transparent.png");
 }
 
 .insta {
-  background-image: url("/assetes/img/insta-transparent.png");
+  background-image: url("../assetes/img/insta-transparent.png");
 }
 
 .twitter {
-  background-image: url("/assetes/img/twitter-transparent.png");
+  background-image: url("../assetes/img/twitter-transparent.png");
 }
 
 .youtube {
-  background-image: url("/assetes/img/youtube-icon-transparent.png");
+  background-image: url("../assetes/img/youtube-icon-transparent.png");
 }
 
 .social-icons li {

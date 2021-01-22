@@ -24,7 +24,7 @@ function createsoundbite(sound) {
         html5audio.load()
         html5audio.playclip = function () {
             html5audio.pause()
-            html5audio.volume = 0.05
+            html5audio.volume = 0.01
             html5audio.currentTime = 0
             html5audio.play()
         }
