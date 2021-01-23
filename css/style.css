@@ -254,6 +254,19 @@ input[type="password"] {
   }
 }
 
+/*============= MEDIA UNTERSEITE =============*/
+
+.mediarow {
+  margin-top: 60px;
+}
+
+.plakat {
+  height: 500px;
+}
+.plakat img {
+  width: 100%;
+}
+
 /*============= FOOTER =============*/
 
 .copyright-text {
