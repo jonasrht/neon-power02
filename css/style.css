@@ -186,6 +186,7 @@ input[type="password"] {
   font-size: 15px;
   color: #f1f1f1;
   display: block;
+  text-shadow:2px 2px #010310;
 }
 
 .sidenav a:hover {
