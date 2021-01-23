@@ -48,12 +48,13 @@
 
   <!-- Top Bar -->
   <div class="top-bar">
-    <div class="container">
+    <div class="container my-logo">
       <div class="col-12 text-center">
         <a class="neon" href="index.html">
           <!-- <img class="logo" src="img/logo.png" alt=""> -->
           <div style="margin-top: 80px;" class="neon">Neon </div>
           <div class="neon">Power </div>
+          <!-- <img id="sun" src="assetes/img/sun.png" alt=""> -->
         </a>
       </div>
     </div>
@@ -72,10 +73,10 @@
           <div class="border-top border-dark w-50 my-1"></div>
           <a href="index.html" onmouseover="mouseoversound.playclip()">Home</a>
           <a href="leaderboard.html" onmouseover="mouseoversound.playclip()">Leaderboard</a>
-          <a href="news.html" onmouseover="mouseoversound.playclip()">News</a>
+          <a href="prizepool.html" onmouseover="mouseoversound.playclip()">Prize pool</a>
           <a href="how-to-play.html" onmouseover="mouseoversound.playclip()">How to play</a>
-          <a href="partner.html" onmouseover="mouseoversound.playclip()">Partner</a>
-          <a href="kontakt.html" onmouseover="mouseoversound.playclip()">Kontakt</a>
+          <a href="media.html" onmouseover="mouseoversound.playclip()">Media</a>
+          <a href="kontakt.html" onmouseover="mouseoversound.playclip()">Contact</a>
         </div>
         <script>
           
@@ -158,15 +159,21 @@
   <!-- MUSIC PLAYER-->
   <div class="musicplayer">
     <button id = "playButton" onclick="playMusic()"></button>
-    <audio id ="musicplayer" controls autoplay>
+    <audio id ="musicplayer" controls>
       <source src="sounds/sound02.mp3" type="audio/mpeg">
     </audio>
     <script>
       function playMusic() {
         var music = document.getElementById("musicplayer");
+
+        var button = document.getElementById("playButton");
         if (music.paused) {
+          console.log("Musik wird abgespielt");
           music.play();
+          //button.id = "pauseButton";
         } else {
+          //button.id = "playButton";
+          console.log("Musik pausiert");
           music.pause();
         }
       }
