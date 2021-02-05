@@ -10,6 +10,9 @@
 @media (max-width: 767.98px) {}
 
 body {
+  background-image: url(../assetes/img/bg1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: #010310;
   color: white;
   /* Kein horizontales scrollen */

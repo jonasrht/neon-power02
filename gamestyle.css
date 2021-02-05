@@ -1,4 +1,4 @@
-* {
+.gameDiv * {
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -170,10 +170,6 @@
 #back:hover {
     background-image: url(assets/img/Back_pressed.png);
     cursor: pointer;
-}
-
-body {
-    background-image: src('../assets/img/background.jpg');
 }
 
 #mainDiv {
