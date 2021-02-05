@@ -36,3 +36,41 @@ function createsoundbite(sound) {
 }
 var mouseoversound = createsoundbite("assetes/audio/button-hover.wav")
 var clicksound = createsoundbite("assetes/audio/button-hover.wav")
+
+function downloadFile(uri, name) {
+    var link = document.createElement("a");
+    link.download = name;
+    link.href = uri;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    delete link;
+}
+
+function openPopUpImg() {
+    Swal.fire({
+        showCancelButton: false,
+        showConfirmButton: true,
+        confirmButtonText: "Download",
+        imageUrl: './assetes/img/resized.jpg',
+        customClass: 'swal-picture',  //To connect with css
+        imageWidth: 819,
+        imageHeight: 579,
+        imageAlt: 'Custom image',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            downloadFile('./assetes/img/resized.jpg', 'Werbeplakat.png');
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Aktion erfolgreich',
+                showConfirmButton: false,
+                timer: 1250
+            })
+        }
+    })
+
+}
+
+////////
+
