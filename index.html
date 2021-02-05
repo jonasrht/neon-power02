@@ -4,48 +4,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeonPower</title>
+    <!-- Game libraries -->
+    <script src="libs/phaser.min.js"></script>
+
+    <!-- Prefabs -->
+    <script src="prefabs/helper.js"></script>
+
+    <!-- Scenes -->
+    <script src="scenes/boot.js"></script>
+    <script src="scenes/menu.js"></script>
+    <script src="scenes/preload.js"></script>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Bootstrap CSS laden -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Neon Power</title>
+
+    <!-- Fontawesome CSS laden -->
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
+        rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+    <!-- CSS-Dateien aus css Ordner laden -->
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="gamestyle.css">
     <script src="p5.js"></script>
     <script src="lights.js"></script>
+
+    <!-- Favicon laden -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <audio src="assets/audio/music.mp3" id="bgAudio"></audio>
-    <audio src="assets/audio/startEngine.mp3" id="startEngine"></audio>
-    <audio src="assets/audio/pointup.m4a" id="powerupSound"></audio>
-    <audio src="assets/audio/car02.m4a" id="carSound"></audio>
-    <audio src="assets/audio/buttonSound.wav" id="carSound"></audio>
-    <audio src="assets/audio/repairsound.mp3" id="repairSound"></audio>
-    <canvas id="canvas1"></canvas>
-    <div id="mainDiv">
-        <div id="btnCemter">
-            <div id="startGameBtn"></div>
-        </div>
-        <div id="mainMenu">
-            <div id="controls"></div>
-            <div id="credits"></div>
-            <div id="mute"></div>
+    <!-- Bootstrap Js laden -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+        crossorigin="anonymous"></script>
+    <!-- -->
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container my-logo">
+            <div class="col-12 text-center">
+                <a class="neon" href="index.html">
+                    <img class="logo neon" src="assetes/img/logo_neu.png" alt="">
+                    <!-- <div style="margin-top: 80px;" class="neon">Neon </div>
+          <div class="neon">Power </div> -->
+                    <!-- <img id="sun" src="assetes/img/sun.png" alt=""> -->
+                </a>
+            </div>
         </div>
     </div>
-    <!-- Buttons -->
-    <div id="back"></div>
-    <div id="pause"></div>
-    <div id="muteBtn"></div>
-    <div id="fullscreenBtn"></div>
-    <div id="tryAgain"></div>
-    <div id="Lauter"></div>
-    <div id="Leiser"></div>
 
-    <input type="text" id="txtName" placeholder="Enter your name" />
+    <!-- MAIN CONTENT -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- MENU -->
+            <div class="col-lg-2 col-md-12 col-sm-12 text-left">
+                <div id="sidenav" class="sidenav">
+                    <p class="menu">MENU</p>
+                    <div class="w-50 my-1"></div>
+                    <a href="index.html" onmouseover="mouseoversound.playclip()">Home</a>
+                    <a href="leaderboard.html" onmouseover="mouseoversound.playclip()">Leaderboard</a>
+                    <a href="prizepool.html" onmouseover="mouseoversound.playclip()">Prize pool</a>
+                    <a href="how-to-play.html" onmouseover="mouseoversound.playclip()">How to play</a>
+                    <a href="media.html" onmouseover="mouseoversound.playclip()">Media</a>
+                    <a href="kontakt.html" onmouseover="mouseoversound.playclip()">Contact</a>
+                </div>
+                <script>
 
-    <script src="car.js"></script>
-    <script src="Enemies.js"></script>
-    <script src="roadblock.js"></script>
-    <script src="powerups.js"></script>
-    <script src="particles.js"></script>
-    <script src="main.js"></script>
+                </script>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="col-lg-8 col-md-12 col-sm-12 text-center my-content">
+                <!-- <div class="phaser-app"></div> -->
+                <audio src="assets/audio/music.mp3" id="bgAudio"></audio>
+                <audio src="assets/audio/startEngine.mp3" id="startEngine"></audio>
+                <audio src="assets/audio/pointup.m4a" id="powerupSound"></audio>
+                <audio src="assets/audio/car02.m4a" id="carSound"></audio>
+                <audio src="assets/audio/buttonSound.wav" id="carSound"></audio>
+                <audio src="assets/audio/repairsound.mp3" id="repairSound"></audio>
+                <canvas id="canvas1"></canvas>
+                <div id="mainDiv">
+                    <div id="btnCemter">
+                        <div id="startGameBtn"></div>
+                    </div>
+                    <div id="mainMenu">
+                        <div id="controls"></div>
+                        <div id="credits"></div>
+                        <div id="mute"></div>
+                    </div>
+                </div>
+                <!-- Buttons -->
+                <div id="back"></div>
+                <div id="pause"></div>
+                <div id="muteBtn"></div>
+                <div id="fullscreenBtn"></div>
+                <div id="tryAgain"></div>
+                <div id="Lauter"></div>
+                <div id="Leiser"></div>
+
+                <input type="text" id="txtName" placeholder="Enter your name" />
+
+                <script src="car.js"></script>
+                <script src="Enemies.js"></script>
+                <script src="roadblock.js"></script>
+                <script src="powerups.js"></script>
+                <script src="particles.js"></script>
+                <script src="main.js"></script>
+            </div>
+
+            <!-- LOGIN -->
+            <div class="col-lg-2 col-md-12 col-sm-12 justify-content-center">
+                <div class="login-form">
+                    <form>
+                        <div class="form-group">
+                            <label>Username</label>
+                            <input type="text" class="form-control" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-secondary mt-3">Login</button>
+                        <button type="submit" class="btn btn-black mt-3">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SPACER -->
+    <div class="cotainer my-5"></div>
+
+    <!-- FOOTER -->
+    <div class="container-fluid text-center">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by
+                    <a href="#">Stammspieler Entertainment</a>.
+                </p>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12 text-left">
+                <ul class="social-icons">
+                    <li><a class="facebook" href="http://facebook.com/neon-power"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li><a class="insta" href="https://www.instagram.com/neon-power"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li><a class="twitter" href="http://twitter.com/neon-power"><i class="fab fa-twitter"></i></a></li>
+                    <li><a class="youtube" href="https://www.youtube.com/neon-power"><i class="fab fa-twitter"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <i class="fab fa-facebook"></i>
+        </div>
+    </div>
+
+    <!-- BG IMG -->
+    <!-- <div class="sickybg">
+    <div class="color-overlay"></div>
+    <div class="background-80s animated-clouds stars" style="--background-height:100vh">
+      <div class="grid" style="--grid-color:rgba(115,59,139,0.7);--grid-size:30px;--grid-blur:1px;"></div>
+    </div>
+  </div>
+  <svg width="0" height="0">
+    <filter id="filter">
+      <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="10" id="fractalNoise" />
+      <feDisplacementMap id="displacementMap" in="SourceGraphic" scale="120" />
+    </filter>
+    <animate xlink:href="#displacementMap" id="animclouds1" begin="0; animclouds2.end" attributeName="scale" from="50"
+      to="180" dur="3s" fill="freeze" />
+    <animate xlink:href="#displacementMap" id="animclouds2" begin="animclouds1.end" attributeName="scale" from="180"
+      to="50" dur="3s" fill="freeze" />
+    <animate xlink:href="#fractalNoise" id="animclouds3" begin="0;animclouds4.end" attributeName="baseFrequency"
+      from="0.03" to="0.01" dur="30s" fill="freeze" />
+    <animate xlink:href="#fractalNoise" id="animclouds4" begin="animclouds3.end" attributeName="baseFrequency"
+      from="0.01" to="0.03" dur="30s" fill="freeze" />
+  </svg> -->
+
+
+    <!-- MUSIC PLAYER-->
+    <div class="musicplayer">
+        <button id="playButton" onclick="playMusic()"></button>
+        <audio id="musicplayer" controls>
+            <source src="sounds/sound02.mp3" type="audio/mpeg">
+        </audio>
+        <script>
+            function playMusic() {
+                var music = document.getElementById("musicplayer");
+
+                var button = document.getElementById("playButton");
+                if (music.paused) {
+                    console.log("Musik wird abgespielt");
+                    music.play();
+                    //button.id = "pauseButton";
+                } else {
+                    //button.id = "playButton";
+                    console.log("Musik pausiert");
+                    music.pause();
+                }
+            }
+            var vid = document.getElementById("musicplayer").volume = 0.05;
+        </script>
+    </div>
+
+
 </body>
 
 </html>
