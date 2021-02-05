@@ -72,5 +72,13 @@ function openPopUpImg() {
 
 }
 
-////////
-
+function downloadRadiospot() {
+    downloadFile('./assetes/audio/NeonPower_RadioSpot.mp3', 'Radiospot.mp3')
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Aktion erfolgreich',
+        showConfirmButton: false,
+        timer: 1250
+    })
+}
