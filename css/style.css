@@ -10,6 +10,7 @@
 @media (max-width: 767.98px) {}
 
 body {
+  background-color: #010310;
   color: white;
   /* Kein horizontales scrollen */
   overflow-x: hidden;
@@ -20,7 +21,7 @@ body {
 h1 {
   margin: 30px;
   color: white;
-	text-decoration: none;
+  text-decoration: none;
   border-bottom: none;
   position: relative;
   background-image: linear-gradient(transparent 64px, #F243B3 50%, #FFCA47 100%);
@@ -36,8 +37,8 @@ h1:after {
   margin-right: -50%;
   transform: translate(-50%, -50%);
   height: 3px;
-  background: rgb(63,94,251);
-  background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  background: rgb(63, 94, 251);
+  background: linear-gradient(90deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
 }
 
 @media (max-width: 1199.98px) {
@@ -85,14 +86,13 @@ input[type="password"] {
   animation: neon 5s linear infinite;
   -moz-animation: neon 5s linear infinite;
   -webkit-animation: neon 5s linear infinite;
-  
 }
 
 #sun {
-  position:absolute;
-  left:0px;
-  top:0px;
-  z-index:-1;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
 }
 
 /* .my-logo {
@@ -110,6 +110,7 @@ input[type="password"] {
 }
 
 /*============= CONTENT BOX =============*/
+
 /* Style der contentbox */
 
 .my-content {
@@ -119,6 +120,10 @@ input[type="password"] {
   border-left: 3px solid #7f0b6b;
   border-right: 3px solid #7f0b6b;
   box-shadow: -20px 0 20px -20px #fd53d8, 20px 0 20px -20px #fd53d8;
+}
+
+.my-1 {
+  border-top: 2px solid white;
 }
 
 /*============= LOGIN FORM =============*/
@@ -184,11 +189,9 @@ input[type="password"] {
   80% {
     filter: drop-shadow(0 0 .4vw #FED128);
   } */
-
   50% {
     filter: drop-shadow(0 0 5vw #fd53d8)
   }
-
   100% {
     filter: drop-shadow(0 0 1vw #fd53d8)
   }
@@ -212,7 +215,6 @@ input[type="password"] {
   left: 0;
   /* background-color: black; */
   overflow-x: hidden;
-  
 }
 
 .sidenav a {
@@ -221,7 +223,7 @@ input[type="password"] {
   font-size: 15px;
   color: #f1f1f1;
   display: block;
-  text-shadow:2px 2px #010310;
+  text-shadow: 2px 2px #010310;
 }
 
 .sidenav a:hover {
@@ -263,6 +265,7 @@ input[type="password"] {
 .plakat {
   height: 500px;
 }
+
 .plakat img {
   width: 100%;
 }
@@ -378,7 +381,6 @@ input[type="password"] {
   width: 10px;
   height: 20px;
   border-left: 10px double rgb(255, 255, 255);
-
 }
 
 #playButton {
@@ -408,19 +410,19 @@ input[type="password"] {
   transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-
-
 /*============= BGIMG =============*/
 
 /* Graues overlay, damit sich Schrift besser vom Hintergrund abhebt. */
+
 .color-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgb(0,0,0);
-  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 0%, rgba(0,0,0,1) 100%);opacity: 1;
+  background: rgb(0, 0, 0);
+  background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 212, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  opacity: 1;
   z-index: -1;
   /* Deckkraft momemtan auf 0% */
   opacity: 0%;
@@ -429,11 +431,13 @@ input[type="password"] {
 }
 
 /* Space zwischen Logo und Content-Block */
+
 :root {
   font-size: 3vw;
 }
 
 /* Grid am Boden */
+
 .grid {
   position: absolute;
   bottom: -30%;
@@ -527,7 +531,6 @@ input[type="password"] {
 .sickybg {
   background-repeat: no-repeat;
   background-attachment: fixed;
-
 }
 
 /* MUSIC PLAYER */
@@ -539,10 +542,8 @@ audio::-webkit-media-controls-enclosure {
   background-color: #281E47;
 }
 
-audio::-webkit-media-controls-current-time-display, video::-webkit-media-controls-current-time-display,
-audio::-webkit-media-controls-time-remaining-display, video::-webkit-media-controls-time-remaining-display {
+audio::-webkit-media-controls-current-time-display, video::-webkit-media-controls-current-time-display, audio::-webkit-media-controls-time-remaining-display, video::-webkit-media-controls-time-remaining-display {
   font-family: 'Press Start 2P', cursive;
   font-size: 10px;
   text-shadow: none;
-
 }
