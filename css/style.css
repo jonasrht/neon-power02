@@ -99,7 +99,8 @@ input[type="password"] {
   width: 1150px !important;
   font-size: 20px;
   border-radius: 30px;
-  background-color: #010310;
+  background: linear-gradient(to right, #ad5389, #3c1053);
+  ;
 }
 
 .swal2-styled.swal2-confirm {
@@ -147,16 +148,6 @@ input[type="password"] {
   z-index: -1;
 }
 
-/* .my-logo {
-  
-  background: url(../assetes/img/sun.png);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width:700px;
-  height:400px
-} */
-
 .preview {
   width: 70%;
 }
@@ -166,6 +157,15 @@ input[type="password"] {
 /* Style der contentbox */
 
 .my-content {
+  background-image: url(../assetes/img/smoke-2.png), url(../assetes/img/smoky_bg.png);
+  background-color: #222;
+  border-radius: 1%;
+  border-left: 3px solid #7f0b6b;
+  border-right: 3px solid #7f0b6b;
+  box-shadow: -20px 0 20px -20px #fd53d8, 20px 0 20px -20px #fd53d8;
+}
+
+.my-game-content {
   background-image: url(../assetes/img/smoke-2.png), url(../assetes/img/smoky_bg.png);
   background-color: #222;
   border-radius: 1%;
@@ -220,38 +220,15 @@ input[type="password"] {
 }
 
 @keyframes logo {
-  /* 0%, 100% {
-    filter: drop-shadow(0 0 1vw #fd53d8), drop-shadow(0 0 3vw #fd53d8), drop-shadow(0 0 10vw #fd53d8), drop-shadow(0 0 10vw #fd53d8), drop-shadow(0 0 .4vw #FED128), drop-shadow(.5vw .5vw .1vw #806914);
-    color: #FED128;
-  } */
   0% {
     filter: drop-shadow(0 0 1vw #fd53d8);
   }
-  /* 16% {
-    filter: drop-shadow(0 0 3vw #fd53d8);
-  }
-
-  32% {
-    filter: drop-shadow(0 0 10vw #fd53d8);
-  }
-
-  64% {
-    filter: drop-shadow(0 0 10vw #fd53d8);
-  }
-
-  80% {
-    filter: drop-shadow(0 0 .4vw #FED128);
-  } */
   50% {
     filter: drop-shadow(0 0 5vw #fd53d8)
   }
   100% {
     filter: drop-shadow(0 0 1vw #fd53d8)
   }
-  /* 50% {
-    filter: drop-shadow(0 0 .5vw #800E0B), drop-shadow(0 0 1.5vw #800E0B), drop-shadow(0 0 5vw #800E0B), drop-shadow(0 0 5vw #800E0B), drop-shadow(0 0 .2vw #800E0B), drop-shadow(.5vw .5vw .1vw #40340A);
-    color: #806914;
-  } */
 }
 
 /*============= SIDE BAR =============*/
