@@ -98,8 +98,13 @@ input[type="password"] {
 .swal-picture {
   width: 1150px !important;
   font-size: 20px;
-  border-radius: 30px;
+  border-radius: 20px;
   background: linear-gradient(to right, #ad5389, #3c1053);
+  background-image: url(../assetes/img/smoke-2.png), url(../assetes/img/smoky_bg.png);
+  background-color: #222;
+  border-left: 3px solid #7f0b6b;
+  border-right: 3px solid #7f0b6b;
+  box-shadow: -20px 0 20px -20px #fd53d8, 20px 0 20px -20px #fd53d8;
   ;
 }
 
