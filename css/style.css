@@ -387,6 +387,20 @@ input[type="password"] {
   transition: top 1s;
 }
 
+.pricecol {
+  border: 1px solid #010310;
+}
+
+.pricecolOne {
+  box-shadow: 1px 1px 15px #f36100, -1px -1px 15px #f8ea1b;
+}
+
+.mypricepool p {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  font-size: 20px;
+}
+
 /*============= MUSIC PLAYER =============*/
 
 .musicplayer {
