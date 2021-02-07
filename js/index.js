@@ -82,3 +82,15 @@ function downloadRadiospot() {
         timer: 1250
     })
 }
+
+function downloadImg() {
+    downloadFile('./assetes/img/resized.jpg', 'Werbeplakat.png')
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Aktion erfolgreich',
+        showConfirmButton: false,
+        timer: 1250
+    })
+}
+
