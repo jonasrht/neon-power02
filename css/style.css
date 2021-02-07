@@ -66,6 +66,10 @@ button:hover {
   transition: 0.3s;
 }
 
+table {
+  color: white !important;
+}
+
 @media (max-width: 1199.98px) {
   h1 {
     font-size: 25px;
